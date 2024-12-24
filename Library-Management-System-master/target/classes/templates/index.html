@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Home Page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<style>
+    /* Background Image Styling with Blur Effect */
+    .background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: url('https://i.ibb.co/gZ6ZMRp/susan-q-yin-YQhhl-CS9-Hto-unsplash-2.jpg') no-repeat center center fixed;
+        background-size: cover;
+        filter: blur(4px); /* Apply blur effect */
+        -webkit-filter: blur(4px); /* For Safari */
+        z-index: -1; /* Ensure background is behind content */
+    }
+
+    /* Transparent logo styling */
+    .logo-container {
+        text-align: center;
+        margin-top: 70px;
+    }
+
+    .logo-container img {
+        max-width: 300px;
+        height: auto;
+        opacity: 0.8; /* Make the logo transparent */
+    }
+
+    /* Header fragment (optional styling) */
+    .header {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    /* Heading styling */
+    .headingName {
+        color: white;
+        font-family: 'Courier New', Courier, monospace; /* Font style */
+        font-size: 3rem; /* Larger font size */
+        font-weight: bold; /* Bold text */
+        overflow: hidden;
+        white-space: nowrap;
+        display: inline-block;
+        border-right: 4px solid transparent; /* Invisible cursor */
+        animation: typing 2.5s steps(40, end) forwards; /* Typing animation */
+    }
+
+    /* Typing animation */
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 28ch; /* Adjust width to fit the text */
+        }
+    }
+</style>
+</head>
+
+<body>
+    <!-- Background Image with Blur Effect -->
+    <div class="background"></div>
+
+    <!-- Optional Header -->
+    <div th:insert="fragments/header :: header" class="header"></div>
+
+    <!-- Logo Container -->
+    <div class="logo-container">
+        <a href="https://imgbb.com/">
+            <img src="https://i.ibb.co/jHd3NRd/708-7084117-bjp-symbol-png-png-download-siksha-o-anusandhan-removebg-preview.png" 
+                 alt="708-7084117-bjp-symbol-png-png-download-siksha-o-anusandhan-removebg-preview" border="0">
+        </a>
+        <h1 class="headingName">Library Management System.</h1>
+    </div>
+</body>
+</html>
